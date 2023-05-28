@@ -11,5 +11,6 @@ def inex():
 def hello(name):
     return "Hello, " + name
 
-if __name__ == '__main__':
-    app.run()
+if __name__ == "__main__":
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=8080)
