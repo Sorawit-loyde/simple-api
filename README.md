@@ -1,10 +1,7 @@
-# simple-api
-for simple api
+## Simple API using Flask
 
-**Run using flask**
-
+### Run using flask
 `python app/app.py`
 
-**Run Docker**
-
+### Run Docker
 `docker-compose -f compose.yaml up`
