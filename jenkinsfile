@@ -5,12 +5,13 @@ pipeline {
         stage('SSH Command') {
             steps {
                 sshCommand remote: [
-          credentialsId: 'SSH-CONFIG',
-          name: 'Unittest-Machine',
-          user: 'bxdman',
-          host: '10.22.4.200',
-          port: '22'
-        ], command: 'ls -al'
+                    credentialsId: 'SSH-CONFIG',
+                    name: 'Unittest-Machine',
+                    user: 'bxdman',
+                    host: '10.22.4.200',
+                    port: '22',
+                    allowAnyHosts: true
+                ], command: 'ls -al'
             }
         }
     }
