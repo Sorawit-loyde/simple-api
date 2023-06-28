@@ -12,6 +12,11 @@ class AppTestCase(unittest.TestCase):
         # test hello
         res = app.hello(1)
         self.assertEqual(res, "Hello, 1")
+    
+    def test_hello_with_float(self):
+        # test hello
+        res = app.hello(1)
+        self.assertEqual(res, 5.22)
 
 
 if __name__ == "__main__":
