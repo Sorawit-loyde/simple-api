@@ -1,0 +1,16 @@
+pipeline {
+  agent any
+
+  stages {
+    stage('SSH Command') {
+      steps {
+        sshCommand remote: [
+          credentialsId: 'SSH-CONFIG',
+          user: 'bxdman',
+          host: '10.22.4.200',
+          port: '22'
+        ], command: 'ls -al'
+      }
+    }
+  }
+}
